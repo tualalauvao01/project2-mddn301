@@ -1,0 +1,100 @@
+body {
+  background-color: white;
+}
+
+/* Style the body */
+/*body {
+padding-left: 0px;
+}
+*/
+
+/* Header/Logo Title */
+header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  background-color: #999a32;
+  border-radius: 2em;
+}
+header.nav {
+  	margin-top: 25px;
+}
+nav{
+	overflow: hidden;
+  font-family: montserrat, sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  color: black;
+  font-size: 48px;
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 10px;
+}
+
+h2 {
+  font-family: feltro normal, serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 30px;
+  margin-top: 2.5em;
+}
+
+h3 {
+  font-family: feltro normal, serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 30px;
+  padding-left: 50;
+  padding-top: 30px;
+}
+
+p {
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  display: block;
+ margin-top: 1em;
+ margin-bottom: 1em;
+margin-left: 1em;
+margin-right: 1em;
+}
+
+p1 {
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+}
+
+p2 {
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+}
+
+div.container {
+  height: 10em;
+  position: relative;
+}
+
+div.container p2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+div.container2 {
+  margin: 0;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
