@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="mystyle.css" media="screen, handheld" />
+<link rel="stylesheet" href="https://use.typekit.net/cqb0vri.css">
+
+</head>
+<style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 align="center">Food For Thought</h1>
+      <nav>
+      <a href="mission.html">Mission</a>
+      <a href="find-your-local-charities.html">Find Your Local Charities</a>
+      </nav>
+</header>
+
+
+<section id="find-your-local-charities.html">
+<h3 align="center">Find Your Local Charities</h3>
+<div class="container">
+<p2> Use this map to locate local charities near you!</p2>
+</div>
+
+<div id="map"></div>
+<script>
+// Initialize and add the map
+function initMap() {
+  var locations = [
+    ['Kaibosh Food Rescue', -41.297996, 174.774405, 4],
+    ['Wellington City Mission', -41.314752, 174.779883, 3],
+    ['The Free Store', -41.292018, 174.773123, 2],
+    ['Wesley Community Action', -41.292064, 174.7784787, 1]
+  ];
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: new google.maps.LatLng(-41.293355, 174.775509),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+var image = 'file:///D:/LEIGH-TRI2/MDDN301/WEBSITE/img/logo2.png';
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map,
+      icon: image
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+
+
+
+}
+
+}
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmyeGWUplOpufiq2cSfbr5oX-l2wSBBXM&callback=initMap">
+    </script>
+</section>
+
+</body>
+</html>
